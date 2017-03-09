@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ActionItemManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.ActionItem" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActionItemManager_GetActionItemsForSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForSite" />
+  </wsdl:message>
+  <wsdl:message name="IActionItemManager_GetActionItemsForSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionItemManager_GetActionItemsForPractice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForPractice" />
+  </wsdl:message>
+  <wsdl:message name="IActionItemManager_GetActionItemsForPractice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForPracticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionItemManager_GetActionItemsForPayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForPayer" />
+  </wsdl:message>
+  <wsdl:message name="IActionItemManager_GetActionItemsForPayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionItemsForPayerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IActionItemManager">
+    <wsdl:operation name="GetActionItemsForSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForSite" message="tns:IActionItemManager_GetActionItemsForSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForSiteResponse" message="tns:IActionItemManager_GetActionItemsForSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionItemsForPractice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForPractice" message="tns:IActionItemManager_GetActionItemsForPractice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForPracticeResponse" message="tns:IActionItemManager_GetActionItemsForPractice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionItemsForPayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForPayer" message="tns:IActionItemManager_GetActionItemsForPayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionItemManager/GetActionItemsForPayerResponse" message="tns:IActionItemManager_GetActionItemsForPayer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IActionItemManager" type="tns:IActionItemManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActionItemsForSite">
+      <soap:operation soapAction="http://tempuri.org/IActionItemManager/GetActionItemsForSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionItemsForPractice">
+      <soap:operation soapAction="http://tempuri.org/IActionItemManager/GetActionItemsForPractice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionItemsForPayer">
+      <soap:operation soapAction="http://tempuri.org/IActionItemManager/GetActionItemsForPayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActionItemManager">
+    <wsdl:port name="BasicHttpBinding_IActionItemManager" binding="tns:BasicHttpBinding_IActionItemManager">
+      <soap:address location="http://dswcf02:61592/ActionItemManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

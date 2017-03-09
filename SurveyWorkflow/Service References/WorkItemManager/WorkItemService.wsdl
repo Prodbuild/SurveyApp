@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkItemSvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dswcf02:61593/WorkItemService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dswcf02:61593/WorkItemService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dswcf02:61593/WorkItemService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkItemService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkItemService_CreateWorkItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorkItem" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_CreateWorkItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_SendWelcomeEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWelcomeEmail" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_SendWelcomeEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWelcomeEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_SetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_SetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetWorkItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItem" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetWorkItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetAllWorkItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkItems" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetAllWorkItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetWorkItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItems" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetWorkItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_UpdateWorkItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkItem" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_UpdateWorkItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_AssignWorkItemToEnrollmentRep_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkItemToEnrollmentRep" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_AssignWorkItemToEnrollmentRep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkItemToEnrollmentRepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_AssignWorkItemToTestingRep_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkItemToTestingRep" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_AssignWorkItemToTestingRep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkItemToTestingRepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_IsBetaSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsBetaSite" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_IsBetaSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsBetaSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetProductionDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionDate" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetProductionDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetOfficeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeName" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetOfficeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetVendorName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorName" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetVendorName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetRepEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepEmail" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_GetRepEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_UpdateRepEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRepEmail" />
+  </wsdl:message>
+  <wsdl:message name="IWorkItemService_UpdateRepEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRepEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkItemService">
+    <wsdl:operation name="CreateWorkItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/CreateWorkItem" message="tns:IWorkItemService_CreateWorkItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/CreateWorkItemResponse" message="tns:IWorkItemService_CreateWorkItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWelcomeEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/SendWelcomeEmail" message="tns:IWorkItemService_SendWelcomeEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/SendWelcomeEmailResponse" message="tns:IWorkItemService_SendWelcomeEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/SetStatus" message="tns:IWorkItemService_SetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/SetStatusResponse" message="tns:IWorkItemService_SetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetWorkItem" message="tns:IWorkItemService_GetWorkItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetWorkItemResponse" message="tns:IWorkItemService_GetWorkItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetAllWorkItems" message="tns:IWorkItemService_GetAllWorkItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetAllWorkItemsResponse" message="tns:IWorkItemService_GetAllWorkItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetWorkItems" message="tns:IWorkItemService_GetWorkItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetWorkItemsResponse" message="tns:IWorkItemService_GetWorkItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/UpdateWorkItem" message="tns:IWorkItemService_UpdateWorkItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/UpdateWorkItemResponse" message="tns:IWorkItemService_UpdateWorkItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkItemToEnrollmentRep">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/AssignWorkItemToEnrollmentRep" message="tns:IWorkItemService_AssignWorkItemToEnrollmentRep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/AssignWorkItemToEnrollmentRepResponse" message="tns:IWorkItemService_AssignWorkItemToEnrollmentRep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkItemToTestingRep">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/AssignWorkItemToTestingRep" message="tns:IWorkItemService_AssignWorkItemToTestingRep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/AssignWorkItemToTestingRepResponse" message="tns:IWorkItemService_AssignWorkItemToTestingRep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsBetaSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/IsBetaSite" message="tns:IWorkItemService_IsBetaSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/IsBetaSiteResponse" message="tns:IWorkItemService_IsBetaSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetProductionDate" message="tns:IWorkItemService_GetProductionDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetProductionDateResponse" message="tns:IWorkItemService_GetProductionDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetOfficeName" message="tns:IWorkItemService_GetOfficeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetOfficeNameResponse" message="tns:IWorkItemService_GetOfficeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetVendorName" message="tns:IWorkItemService_GetVendorName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetVendorNameResponse" message="tns:IWorkItemService_GetVendorName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/GetRepEmail" message="tns:IWorkItemService_GetRepEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/GetRepEmailResponse" message="tns:IWorkItemService_GetRepEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRepEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkItemService/UpdateRepEmail" message="tns:IWorkItemService_UpdateRepEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkItemService/UpdateRepEmailResponse" message="tns:IWorkItemService_UpdateRepEmail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWorkItemService" type="tns:IWorkItemService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateWorkItem">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/CreateWorkItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWelcomeEmail">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/SendWelcomeEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStatus">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/SetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItem">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetWorkItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkItems">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetAllWorkItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItems">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetWorkItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkItem">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/UpdateWorkItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkItemToEnrollmentRep">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/AssignWorkItemToEnrollmentRep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkItemToTestingRep">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/AssignWorkItemToTestingRep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBetaSite">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/IsBetaSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionDate">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetProductionDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeName">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetOfficeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorName">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetVendorName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepEmail">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/GetRepEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRepEmail">
+      <soap:operation soapAction="http://tempuri.org/IWorkItemService/UpdateRepEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkItemSvc">
+    <wsdl:port name="BasicHttpBinding_IWorkItemService" binding="tns:BasicHttpBinding_IWorkItemService">
+      <soap:address location="http://dswcf02:61593/WorkItemService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

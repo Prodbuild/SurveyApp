@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkItemService.Events" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkItemService.Events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="EventCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LoggedInFirstTime" />
+      <xs:enumeration value="SaveContactInformation" />
+      <xs:enumeration value="SubmitEnrollment" />
+      <xs:enumeration value="SavePayerDetail" />
+      <xs:enumeration value="SubmissionApproved" />
+      <xs:enumeration value="NotificationSent" />
+      <xs:enumeration value="WelcomeEmailSent" />
+      <xs:enumeration value="FieldUpdated" />
+      <xs:enumeration value="NoteAdded" />
+      <xs:enumeration value="SiteCreated" />
+      <xs:enumeration value="WorkItemStatusChange" />
+      <xs:enumeration value="GoLiveChange" />
+      <xs:enumeration value="ProviderAdded" />
+      <xs:enumeration value="ProviderRemoved" />
+      <xs:enumeration value="PracticeAdded" />
+      <xs:enumeration value="PracticeUpdated" />
+      <xs:enumeration value="PracticePayerAdded" />
+      <xs:enumeration value="PracticePayerDetailAdded" />
+      <xs:enumeration value="WorkFlowJobServiceRan" />
+      <xs:enumeration value="PayerOffHold" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventCode" nillable="true" type="tns:EventCode" />
+  <xs:complexType name="ArrayOfPortalEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PortalEvent" nillable="true" type="tns:PortalEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortalEvent" nillable="true" type="tns:ArrayOfPortalEvent" />
+  <xs:complexType name="PortalEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EventDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MetaData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebUserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalEvent" nillable="true" type="tns:PortalEvent" />
+</xs:schema>

@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GatewayEDI.Logging.ActivatorHelper" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActivatorHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.CompositeLog" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\CompositeLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.ConsoleLog" Collapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\ConsoleLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.DebugLog" Collapsed="true">
+    <Position X="10" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\DebugLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.DecoratorLog" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\DecorateLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.DelegateLog" Collapsed="true">
+    <Position X="14.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\DelegateLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.NullLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAbAAAAAAAAQAQCBAAAEAQAAAAEEECAA=</HashCode>
+      <FileName>Core Logs\NullLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.TestLog" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAEAAEACAA=</HashCode>
+      <FileName>Core Logs\TestLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.TraceLog" Collapsed="true">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Core Logs\TraceLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.FormattableLogBase" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAQAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>FormattableLogBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.SimpleLogItemFormatter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Formatters\SimpleLogItemFormatter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.GEDITraceListener" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAAAAAggBAAgAAAAEAAAAYAEAAAA=</HashCode>
+      <FileName>GEDITraceListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.LogBase" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAbAABAAAAAQAQCAAAgEAAAAAAEEECAA=</HashCode>
+      <FileName>LogBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.LogItem" Collapsed="true">
+    <Position X="17" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAEAAAAACAIAAAAAAAAIAAABAIAAAABA=</HashCode>
+      <FileName>LogItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.LogManager" Collapsed="true">
+    <Position X="22" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAABAAAAAgAAICEAAAABgAAAAAAAAAAAAg=</HashCode>
+      <FileName>LogManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Configuration.FactoryConfigurationCollection" Collapsed="true">
+    <Position X="4.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAACAAAgAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\FactoryConfigurationCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Configuration.FactoryConfigurationElement" Collapsed="true">
+    <Position X="6.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgRAAAAQAAAAQAIAAAQAAAAAAAAA=</HashCode>
+      <FileName>Configuration\FactoryConfigurationElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Configuration.LogConfigurationCollection" Collapsed="true">
+    <Position X="4.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAACAAAgAAAAAABAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Configuration\LogConfigurationCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Configuration.LogConfigurationElement" Collapsed="true">
+    <Position X="6.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAIAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\LogConfigurationElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Configuration.LogConfigurationSection" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABQAABAAAAIEQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\LogConfigurationSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.ConsoleLogFactory" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\ConsoleLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.DebugLogFactory" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\DebugLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.DelegateFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\DelegateFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.DelegateLogFactory" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\DelegateLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.NamedFactory" Collapsed="true">
+    <Position X="10.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\NamedFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.NamedLogFactoryBase&lt;TLog&gt;" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAgEAAAEAAAAAAAAIAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Factories\NamedLogFactoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.NullLogFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAIAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Factories\NullLogFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.SimpleLogFactory" Collapsed="true">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\SimpleLogFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.SingleLogFactory" Collapsed="true">
+    <Position X="3.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACAA=</HashCode>
+      <FileName>Factories\SingleLogFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.TestLogFactory" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\TestLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Factories.TraceLogFactory" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\TraceLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Formatters.DelegateLogItemFormatter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Formatters\DelegateLogItemFormatter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Formatters.SingleLineFormatter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Formatters\SingleLineFormatter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.AppConfigFactoryResolver" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAQAACAI=</HashCode>
+      <FileName>Resolver\AppConfigFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.DelegateFactoryResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\DelegateFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.DelegateResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAABCAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\DelegateResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.NamedFactoryResolver" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAACAAAAAAAAAIAAAAAIQAAA=</HashCode>
+      <FileName>Resolver\NamedFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.NullLogFactoryResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAACAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\NullLogFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.SimpleFactoryResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\SimpleFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GatewayEDI.Logging.Resolver.SimpleLogResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAACAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\SimpleLogResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="GatewayEDI.Logging.IConfigurableLogFactory" Collapsed="true">
+    <Position X="6.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>IConfigurableLogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GatewayEDI.Logging.IFactoryResolver" Collapsed="true">
+    <Position X="13.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFactoryResolver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GatewayEDI.Logging.IFormattableLog" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFormattableLog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GatewayEDI.Logging.ILog" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAbAAAAAAAAAAQCAAAAEAAAAAAEEECAA=</HashCode>
+      <FileName>ILog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GatewayEDI.Logging.ILogFactory" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILogFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GatewayEDI.Logging.ILogItemFormatter" Collapsed="true">
+    <Position X="24" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ILogItemFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GatewayEDI.Logging.LogLevel" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAAAAAAAEAAAAAAEAEACA=</HashCode>
+      <FileName>LogLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="GatewayEDI.Logging.LogFilter" Collapsed="true">
+    <Position X="20.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core Logs\LogFilter.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GatewayEDI.Logging.Factories.LogRequestHandler" Collapsed="true">
+    <Position X="22.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\LogRequestHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GatewayEDI.Logging.Formatters.FormatRequestHandler" Collapsed="true">
+    <Position X="18.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formatters\FormatRequestHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GatewayEDI.Logging.Resolver.FactoryRequestHandler" Collapsed="true">
+    <Position X="17" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resolver\FactoryRequestHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

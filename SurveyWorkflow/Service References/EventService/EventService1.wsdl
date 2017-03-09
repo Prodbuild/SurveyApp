@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EventService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61593/EventService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61593/EventService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61593/EventService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkItemService.Events" />
+      <xsd:import schemaLocation="http://localhost:61593/EventService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEventService_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_AddForSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddForSite" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_AddForSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddForSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetLastOccurrence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOccurrence" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetLastOccurrence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOccurrenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetLastOccurrenceForSites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOccurrenceForSites" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetLastOccurrenceForSites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOccurrenceForSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetMetaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetMetaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetMetaDataForSites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataForSites" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetMetaDataForSites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataForSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetWebUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebUserId" />
+  </wsdl:message>
+  <wsdl:message name="IEventService_GetWebUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebUserIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEventService">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/Add" message="tns:IEventService_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/AddResponse" message="tns:IEventService_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddForSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/AddForSite" message="tns:IEventService_AddForSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/AddForSiteResponse" message="tns:IEventService_AddForSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOccurrence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/GetLastOccurrence" message="tns:IEventService_GetLastOccurrence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/GetLastOccurrenceResponse" message="tns:IEventService_GetLastOccurrence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOccurrenceForSites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/GetLastOccurrenceForSites" message="tns:IEventService_GetLastOccurrenceForSites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/GetLastOccurrenceForSitesResponse" message="tns:IEventService_GetLastOccurrenceForSites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/GetMetaData" message="tns:IEventService_GetMetaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/GetMetaDataResponse" message="tns:IEventService_GetMetaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataForSites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/GetMetaDataForSites" message="tns:IEventService_GetMetaDataForSites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/GetMetaDataForSitesResponse" message="tns:IEventService_GetMetaDataForSites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEventService/GetWebUserId" message="tns:IEventService_GetWebUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEventService/GetWebUserIdResponse" message="tns:IEventService_GetWebUserId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEventService" type="tns:IEventService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/IEventService/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddForSite">
+      <soap:operation soapAction="http://tempuri.org/IEventService/AddForSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOccurrence">
+      <soap:operation soapAction="http://tempuri.org/IEventService/GetLastOccurrence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOccurrenceForSites">
+      <soap:operation soapAction="http://tempuri.org/IEventService/GetLastOccurrenceForSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="http://tempuri.org/IEventService/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataForSites">
+      <soap:operation soapAction="http://tempuri.org/IEventService/GetMetaDataForSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebUserId">
+      <soap:operation soapAction="http://tempuri.org/IEventService/GetWebUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EventService">
+    <wsdl:port name="BasicHttpBinding_IEventService" binding="tns:BasicHttpBinding_IEventService">
+      <soap:address location="http://localhost:61593/EventService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

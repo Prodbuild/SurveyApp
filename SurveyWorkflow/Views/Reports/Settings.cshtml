@@ -1,0 +1,70 @@
+﻿@model EnrollmentWorkflow.Models.SettingsModel
+
+<div id="settings">
+    <form id="settings-config" class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(x => x.MissingGoLive, "Missing Go Live", new { @class = "col-sm-3 control-label" })
+
+            <div class="col-sm-3">
+                @Html.TextBoxFor(x => x.MissingGoLive, new
+                {
+                    @class = "form-control",
+                    data_toggle = "tooltip", 
+                    data_placement = "right",
+                    title = "Tooltip on right"
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.StillEnrolling, "Still Enrolling", new { @class = "col-sm-3 control-label" })
+
+            <div class="col-sm-3">
+                @Html.TextBoxFor(x => x.StillEnrolling, new
+                {
+                    @class = "form-control",
+                    data_toggle = "tooltip",
+                    data_placement = "right",
+                    title = "Tooltip on right"
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.NotTesting, "Not Testing", new { @class = "col-sm-3 control-label" })
+            
+            <div class="col-sm-3">
+                @Html.TextBoxFor(x => x.NotTesting, new
+                {
+                    @class = "form-control",
+                    data_toggle = "tooltip",
+                    data_placement = "right",
+                    title = "Tooltip on right"
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+                <input type="submit" class="btn btn-success" value="Save"/>
+                <input type="reset" class="btn btn-danger" value="Cancel"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $("#settings-config").submit(function() {
+            $.ajax({
+                type: "POST",
+                url: "/EnrollmentWorkflow/Reports/SaveSettings",
+                data: $("#settings-config").serialize(),
+                success: function(data) {
+                    
+                }
+            });
+
+            return false;
+        });
+    });
+</script>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" />
+  <xs:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetPayers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPayersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="npi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMedicalGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="to" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="GetEnrollmentStatusByDateResult" nillable="true" type="q1:EnrollmentStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByTaxId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByTaxIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEnrollmentStatusByTaxIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByTaxIdAndNpi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="npi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByTaxIdAndNpiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEnrollmentStatusByTaxIdAndNpiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByOriginatingRequestId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="originatingRequestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentStatusByOriginatingRequestIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="GetEnrollmentStatusByOriginatingRequestIdResult" nillable="true" type="q2:EnrollmentStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroupsBySiteId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroupsBySiteIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMedicalGroupsBySiteIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroupsByTaxId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalGroupsByTaxIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMedicalGroupsByTaxIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAllMedicalGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="requestType" type="q3:RequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAllMedicalGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="CreateAllMedicalGroupsResult" nillable="true" type="q4:ArrayOfMedicalGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollMedicalGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="requestType" type="q5:RequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollMedicalGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="EnrollMedicalGroupResult" nillable="true" type="q6:MedicalGroupEnrollmentResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollAllMedicalGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="requestType" type="q7:RequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollAllMedicalGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EnrollAllMedicalGroupsResult" nillable="true" type="q8:ArrayOfKeyValueOflongMedicalGroupEnrollmentResponseY6qKFeLM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayerEnrollmentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="payerListId" nillable="true" type="q9:ArrayOfint" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="payerStatus" nillable="true" type="q10:MadaketPayerStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayerEnrollmentStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenEnrollmentSubmissions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenEnrollmentSubmissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="GetOpenEnrollmentSubmissionsResult" nillable="true" type="q11:ArrayOfEnrollmentSubmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenEnrollmentSubmissionsForSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenEnrollmentSubmissionsForSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="GetOpenEnrollmentSubmissionsForSiteResult" nillable="true" type="q12:ArrayOfEnrollmentSubmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEnrollmentSubmission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="submission" nillable="true" type="q13:EnrollmentSubmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEnrollmentSubmissionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEnrollmentSubmission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" minOccurs="0" name="submissions" nillable="true" type="q14:ArrayOfEnrollmentSubmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEnrollmentSubmissionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

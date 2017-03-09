@@ -1,0 +1,92 @@
+﻿
+@using EnrollmentWorkflow.Models
+@using Kendo.Mvc.UI
+
+@model NewWorkItem
+
+<form id="createNewWorkItem" class="form-horizontal" method="post">
+    <div class="form-group" style="align-content:center;padding-left : 160px;">
+        <span id="newWorkItemValidationSummary">
+        </span>
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.SiteId, new { @class = "control-label mandatoryField col-md-1" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(x => x.SiteId, new { @maxlength = 4, @class = "form-control" , @style = "text-transform:uppercase;" })
+        </div>
+
+        @Html.LabelFor(x => x.Vendor, new { @class = "control-label mandatoryField col-md-2" })
+        <div class="col-md-3">
+            
+            @(Html.Kendo().ComboBoxFor(x => x.Vendor)
+                  .Name("Vendor")
+                  .Placeholder("Select Vendor")
+                  .DataTextField("Text")
+                  .DataValueField("Value")
+                  .Filter(FilterType.Contains)
+                  .DataSource(source =>
+                  {
+                      source.Read(read =>
+                      {
+                          read.Action("LoadVendor", "WorkItem");
+                      });
+                  })
+                  .HtmlAttributes(new { @style = "width:280px;z-index:9999" })
+            )
+
+        </div>
+
+        @Html.LabelFor(x => x.EnrollmentRep, new { @class = "control-label col-md-2" })
+        <div class="col-md-2">
+            @(Html.Kendo().DropDownListFor(x => x.EnrollmentRep)
+                                     .Name("EnrollmentRep")
+                                     .DataTextField("Text")
+                                     .DataValueField("Value")
+                                     .BindTo(new SelectList((IEnumerable<SelectListItem>)ViewBag.GroupMembers, "Value", "Text"))
+                                     .HtmlAttributes(new { @class = "form-control editable" })
+            )
+        </div>
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.DocType, new { @class = "control-label col-md-1" })
+        <div class="col-md-2">
+            @(Html.TextBoxFor(x => x.DocType, new { @maxlength = 4, @class = "form-control" }))
+        </div>
+
+        @Html.LabelFor(x => x.OfficeName, new { @class = "control-label mandatoryField col-md-2" })
+        <div class="col-md-3">
+            @Html.TextBoxFor(x => x.OfficeName, new { @maxlength = 100, @class = "form-control" })
+        </div>
+
+        @Html.LabelFor(x => x.InstallType, new { @class = "control-label col-md-2" })
+        <div class="col-md-2">
+            @(Html.TextBoxFor(x => x.InstallType, new { @maxlength = 4, @class = "form-control" }))
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.ProjectManager, new { @class = "control-label col-md-1" })
+        <div class="col-md-2">
+            @(Html.TextBoxFor(x => x.ProjectManager, new { @maxlength = 50, @class = "form-control" }))
+        </div>
+
+        @Html.LabelFor(x => x.ContractDate, new { @class = "col-md-2 control-label mandatoryField" })
+        <div class="col-md-3">
+            @(Html.Kendo().DatePickerFor(x => x.ContractDate)
+                          .Name("ContractDate"))
+        </div>
+
+        @Html.LabelFor(x => x.EcwGroup, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @(Html.TextBoxFor(x => x.EcwGroup, new { @maxlength = 50, @class = "form-control" })) <br /><br />
+
+            <input type="button" id="createActionItem" class="btn btn-primary" value="Create Work Item" />
+            <div id="showLoading" style="width:30px;float:right;">
+
+            </div>
+        </div>
+    </div>
+</form>
+

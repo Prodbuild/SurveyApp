@@ -1,0 +1,122 @@
+﻿.tabClose {
+    cursor: pointer;
+}
+
+[id^=workItemGrid] tr {
+    cursor: pointer;
+}
+
+.clear-left {
+    clear: both;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.float-left {
+    float: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.field {
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-tabs > li.active.bg-danger > a,
+.nav-tabs > li.active.bg-danger > a:hover,
+.nav-tabs > li.active.bg-danger > a:focus {
+    color: #555555;
+    cursor: default;
+    background-color: #d9534f;
+}
+
+.dashboard-item {
+    width: 180px;
+    text-align: center;
+    float: left;
+    margin: 5px 10px;
+}
+
+    .dashboard-item div {
+        border-top: solid 1px #ccc;
+        border-bottom: solid 1px #ccc;
+        padding: 3px 0;
+    }
+
+.error {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #c31818;
+}
+
+#settings {
+    margin-top: 25px;
+    width: 800px;
+}
+
+    #settings .tooltip-inner {
+        max-width: 200px;
+        width: 200px;
+    }
+
+.modal-dialog {
+    margin-top: 15%;
+}
+
+.payer-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px 4px;
+}
+
+div.k-grid-content {
+    min-height: 200px;
+}
+
+.panel-body .k-grid-header .k-header {
+    white-space: normal;
+}
+
+.mandatoryField:after {
+    content: " *";
+    color: red;
+}
+
+.errorField {
+    border: 1px solid red !important;
+}
+
+.errorFieldSummary {
+    display:block !important;
+    color:red !important;   
+}
+
+.successMessageDisplay {
+    display: block !important;
+    color: green !important;
+    font-weight:600;
+}
+
+.nodisplay{
+    display: none;
+}
+
+input[type=checkbox].chkActive {
+        cursor: pointer;
+    }
+
+#manageWorkItems .panel-heading {
+        height: 36px !important;
+    }

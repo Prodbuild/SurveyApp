@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PracticeManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dswcf02:61592/PracticeManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PracticeManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PracticeManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Practice" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PracticeManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPracticeManager_AddPractice_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPractice" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_AddPractice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_AddPracticeNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticeNotes" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_AddPracticeNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticeNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_UpdatePractice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePractice" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_UpdatePractice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePracticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_RemovePractice_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePractice" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_RemovePractice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePracticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPractices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPractices" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPractices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeDataForPracticeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeDataForPracticeId" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeDataForPracticeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeDataForPracticeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetCountPracticesWithoutPayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountPracticesWithoutPayers" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetCountPracticesWithoutPayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountPracticesWithoutPayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeProviderInfoForPracticeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeProviderInfoForPracticeId" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeProviderInfoForPracticeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeProviderInfoForPracticeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeEnrollmentStatusForPracticeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeEnrollmentStatusForPracticeId" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_GetPracticeEnrollmentStatusForPracticeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticeEnrollmentStatusForPracticeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_UpdatePracticePayerSubmittedDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePracticePayerSubmittedDate" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_UpdatePracticePayerSubmittedDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePracticePayerSubmittedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_PracticeExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:PracticeExists" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_PracticeExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PracticeExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_ResetSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetSite" />
+  </wsdl:message>
+  <wsdl:message name="IPracticeManager_ResetSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetSiteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPracticeManager">
+    <wsdl:operation name="AddPractice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/AddPractice" message="tns:IPracticeManager_AddPractice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/AddPracticeResponse" message="tns:IPracticeManager_AddPractice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPracticeNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/AddPracticeNotes" message="tns:IPracticeManager_AddPracticeNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/AddPracticeNotesResponse" message="tns:IPracticeManager_AddPracticeNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePractice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/UpdatePractice" message="tns:IPracticeManager_UpdatePractice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/UpdatePracticeResponse" message="tns:IPracticeManager_UpdatePractice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePractice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/RemovePractice" message="tns:IPracticeManager_RemovePractice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/RemovePracticeResponse" message="tns:IPracticeManager_RemovePractice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPractices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/GetPractices" message="tns:IPracticeManager_GetPractices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticesResponse" message="tns:IPracticeManager_GetPractices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeDataForPracticeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeDataForPracticeId" message="tns:IPracticeManager_GetPracticeDataForPracticeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeDataForPracticeIdResponse" message="tns:IPracticeManager_GetPracticeDataForPracticeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountPracticesWithoutPayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/GetCountPracticesWithoutPayers" message="tns:IPracticeManager_GetCountPracticesWithoutPayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/GetCountPracticesWithoutPayersResponse" message="tns:IPracticeManager_GetCountPracticesWithoutPayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeProviderInfoForPracticeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeProviderInfoForPracticeId" message="tns:IPracticeManager_GetPracticeProviderInfoForPracticeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeProviderInfoForPracticeIdResponse" message="tns:IPracticeManager_GetPracticeProviderInfoForPracticeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeEnrollmentStatusForPracticeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeEnrollmentStatusForPracticeId" message="tns:IPracticeManager_GetPracticeEnrollmentStatusForPracticeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/GetPracticeEnrollmentStatusForPracticeIdResponse" message="tns:IPracticeManager_GetPracticeEnrollmentStatusForPracticeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePracticePayerSubmittedDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/UpdatePracticePayerSubmittedDate" message="tns:IPracticeManager_UpdatePracticePayerSubmittedDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/UpdatePracticePayerSubmittedDateResponse" message="tns:IPracticeManager_UpdatePracticePayerSubmittedDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PracticeExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/PracticeExists" message="tns:IPracticeManager_PracticeExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/PracticeExistsResponse" message="tns:IPracticeManager_PracticeExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPracticeManager/ResetSite" message="tns:IPracticeManager_ResetSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPracticeManager/ResetSiteResponse" message="tns:IPracticeManager_ResetSite_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPracticeManager" type="tns:IPracticeManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddPractice">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/AddPractice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPracticeNotes">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/AddPracticeNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePractice">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/UpdatePractice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePractice">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/RemovePractice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPractices">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/GetPractices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeDataForPracticeId">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/GetPracticeDataForPracticeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountPracticesWithoutPayers">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/GetCountPracticesWithoutPayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeProviderInfoForPracticeId">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/GetPracticeProviderInfoForPracticeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticeEnrollmentStatusForPracticeId">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/GetPracticeEnrollmentStatusForPracticeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePracticePayerSubmittedDate">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/UpdatePracticePayerSubmittedDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PracticeExists">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/PracticeExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetSite">
+      <soap:operation soapAction="http://tempuri.org/IPracticeManager/ResetSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PracticeManager">
+    <wsdl:port name="BasicHttpBinding_IPracticeManager" binding="tns:BasicHttpBinding_IPracticeManager">
+      <soap:address location="http://dswcf02:61592/PracticeManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

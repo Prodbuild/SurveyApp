@@ -1,0 +1,128 @@
+﻿@using Kendo.Mvc.UI
+@using EnrollmentWorkflow.Models
+@model HomeModel
+
+<div class="container-fluid">
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-body">    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="text-align: center">
+                            <h3>At Risk Sites</h3>
+
+                            <div style="display: inline-block">
+                                <div class="dashboard-item">
+                                    <h3>
+                                        <a href="javascript:void(0)" onclick="openReport('missingGoLive', 'Missing Go Live','missingGoLiveCount=@Model.MissingGoLive')">
+                                            @Model.MissingGoLive
+                                        </a>
+                                    </h3>
+                                    <div>
+                                        Missing Go Live
+                                    </div>
+                                </div>
+                                <div class="dashboard-item">
+                                    <h3>
+                                        <a href="javascript:void(0)" onclick="openReport('missingDaysToImplement', 'Missing Days to Implement','missingDaysToImplementCount=@Model.MissingDaysToImplement') ">
+                                            @Model.MissingDaysToImplement
+                                        </a>
+                                    </h3>
+                                    <div>
+                                        Missing days to implement
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="text-align: center">
+                            <div style="display: inline-block">
+                                <h3>Statistics</h3>
+
+                                <div class="dashboard-item">
+                                    <h3>@Model.AverageDaysToImplement.ToString("0.0")</h3>
+                                    <div>
+                                        Average Days to Implement
+                                    </div>
+                                </div>
+                                <div class="dashboard-item">
+                                    <h3>
+                                        <a href="javascript:void(0)" onclick="openReport('sitesInImplementation', 'Sites in Implementation','sitesInImplementationCount=@Model.SitesInImplementation')">
+                                            @Model.SitesInImplementation
+                                        </a>
+                                    </h3>
+                                    <div>
+                                        Sites in Implementation
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            @(Html.Kendo().Grid<WorkItemReportModel>().Name("report_InImplementation")
+                                  .AutoBind(false).DataSource(data => data
+                                      .Ajax()
+                                      .Model(model => { model.Id(w => w.RepDisplayName); })
+                                      .Read(readAction => readAction.Action("LoadUserReport", "Charts")
+                                      )
+                                  )
+                                  .Columns(columns =>
+                                  {
+                                      columns.Template(@<text></text>).ClientTemplate("<a href='\\#' class='toggleLink' name='repName' onclick='gotoRepList(\"#= RepSamName #\");'>#= RepDisplayName #</a>").HeaderTemplate(@<text>Enrollment Rep</text>).Width(120);
+                                      columns.Bound(col => col.ADI).ClientTemplate("#: kendo.toString(ADI, '0.0') #").Title("Average Days to Implement");
+                                      columns.Bound(col => col.OpenWorkItems).Title("Open Work Items");
+                                      columns.Bound(col => col.OutsideSLA).Title("Outside SLA");
+                                  })
+                                  .Resizable(x => x.Columns(true))
+                                  .Sortable(sort => sort.AllowUnsort(false).SortMode(GridSortMode.SingleColumn))
+                                  .Scrollable(s => s.Height(367))
+                                  )
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="chart-wrapper">
+                                @(Html.Kendo().Chart<SitesInImplementationModel>()
+                                      .Name("Chart_InImplementation")
+                                      .Title("Sites in Implementation")
+                                      .Theme("silver")
+                                      .Legend(legend => legend
+                                          .Visible(true))                                        
+                                      .DataSource(ds => { ds.Read(read => read.Action("LoadChartData", "Charts")); })
+                                      .Series(series => { series.Pie(model => model.Count, model => model.Status); })
+                                      .Events(events => events.SeriesClick("areaClicked"))
+                                      .Tooltip(tooltip => tooltip
+                                          .Visible(true)
+                                          .Format("{0:N0}")
+                                          .Template("#= category # - #= kendo.format('{0:P}', percentage)#")
+                                      ))
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // populating "reports in implementation grid" in dashboard
+        var grid = $("#report_InImplementation.k-grid").data("kendoGrid");
+        grid.dataSource.read();
+
+    });    
+</script>

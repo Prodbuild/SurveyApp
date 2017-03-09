@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1da9050c-e6e6-479f-a40c-ce3dbd946883" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dswcf02:61592/ActionItemManager.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ActionItemManager.xsd" MetadataType="Schema" ID="cb178a71-64b4-49cd-bafc-2ec6644fb40f" SourceId="1" SourceUrl="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd2" />
+    <MetadataFile FileName="ActionItemManager.disco" MetadataType="Disco" ID="f91b1a65-1226-4b73-9ce7-f12dd7957c15" SourceId="1" SourceUrl="http://dswcf02:61592/ActionItemManager.svc?disco" />
+    <MetadataFile FileName="ActionItemManager1.xsd" MetadataType="Schema" ID="36ab2340-0dce-40e1-8581-ce60a57b6911" SourceId="1" SourceUrl="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd0" />
+    <MetadataFile FileName="ActionItemManager.wsdl" MetadataType="Wsdl" ID="21e7a7d7-5c17-46c6-a6b7-7572fa3a7212" SourceId="1" SourceUrl="http://dswcf02:61592/ActionItemManager.svc?wsdl" />
+    <MetadataFile FileName="ActionItemManager2.xsd" MetadataType="Schema" ID="8fc69140-7a60-44d1-8884-1297c569e8a2" SourceId="1" SourceUrl="http://dswcf02:61592/ActionItemManager.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

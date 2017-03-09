@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77fb1796-65e3-49b6-b5e1-6375fd3c9e66" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61593/EventService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EventService3.xsd" MetadataType="Schema" ID="23261907-a80d-4a25-89d4-59b09745325f" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EventService1.wsdl" MetadataType="Wsdl" ID="c7e64541-2403-45c1-8eb8-3743a2597762" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?wsdl" />
+    <MetadataFile FileName="EventService31.xsd" MetadataType="Schema" ID="c93c732c-3862-4748-a672-e439954b8d6f" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EventService1.disco" MetadataType="Disco" ID="7715c5a0-0b88-4fca-bbfb-5bf2b5cf545d" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?disco" />
+    <MetadataFile FileName="EventService32.xsd" MetadataType="Schema" ID="cc1ec033-4923-4e0a-a87f-708387c67217" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EventService33.xsd" MetadataType="Schema" ID="8180c33c-f564-4108-a296-59f86bf65c9f" SourceId="1" SourceUrl="http://localhost:61593/EventService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

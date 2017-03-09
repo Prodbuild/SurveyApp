@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8c5291b8-db91-4efe-bc02-a2ab03929e73" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="7047255e-a782-4eb1-bc76-8058bc66a08c" name="Application Server">
+      <childLayers>
+        <layer Id="07795e93-f640-4269-b9cc-de88401eef20" name="Duplicate Claims Check Service">
+          <childLayers>
+            <layer Id="bcc95f50-e078-49fa-84b9-0f832a5bf972" name="Service Broker Application">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="26805180-fb3f-4174-aa3e-7af85c27a7d3" direction="Forward">
+                  <layerMoniker Id="372a574b-c66f-4d0f-ace6-95e7297ece8f" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="82384ecc-82a0-4784-aa0d-db6bf59dbb93" name="Static Factories" />
+            <layer Id="01f44389-d924-458a-a7e3-f92c8819184d" name="Logging" />
+            <layer Id="96f99d4f-bedc-482d-ba55-1020c7ecaae6" name="Duplicate Claims Check">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="aa92a2ae-4bed-4a5b-83a7-f8f9cc0191b2" direction="Forward">
+                  <layerMoniker Id="0867c11c-301f-4f6f-aaa7-b5c158fb8b73" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="4e2c4908-f466-4b22-b8ce-185f4642b6ab" name="ClaimsDataSet" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="1dca3905-ff96-46cd-bd99-79b6c167fee1" name="Database Server">
+      <childLayers>
+        <layer Id="0867c11c-301f-4f6f-aaa7-b5c158fb8b73" name="ClaimsTrans&#xD;&#xA;Database" />
+        <layer Id="372a574b-c66f-4d0f-ace6-95e7297ece8f" name="ClmTrans_Addenda database" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

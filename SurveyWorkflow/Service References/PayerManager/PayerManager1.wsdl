@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PayerManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Enums" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPayerManager_AddPracticePayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticePayer" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_AddPracticePayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticePayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_AddPayerNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPayerNotes" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_AddPayerNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPayerNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_RemovePracticePayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePracticePayer" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_RemovePracticePayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePracticePayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPayerListData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayerListData" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPayerListData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayerListDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerInfoForPracticeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerInfoForPracticeId" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerInfoForPracticeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerInfoForPracticeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_AddPracticePayerDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticePayerDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_AddPracticePayerDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPracticePayerDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerDetailForPracticeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerDetailForPracticeId" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerDetailForPracticeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerDetailForPracticeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerDetailForPracticeIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerDetailForPracticeIdList" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_GetPracticePayerDetailForPracticeIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPracticePayerDetailForPracticeIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsProviderIdRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsProviderIdRequired" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsProviderIdRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsProviderIdRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsGroupProviderIdRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsGroupProviderIdRequired" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsGroupProviderIdRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsGroupProviderIdRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsIndividualProviderIdRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsIndividualProviderIdRequired" />
+  </wsdl:message>
+  <wsdl:message name="IPayerManager_IsIndividualProviderIdRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsIndividualProviderIdRequiredResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPayerManager">
+    <wsdl:operation name="AddPracticePayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/AddPracticePayer" message="tns:IPayerManager_AddPracticePayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/AddPracticePayerResponse" message="tns:IPayerManager_AddPracticePayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPayerNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/AddPayerNotes" message="tns:IPayerManager_AddPayerNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/AddPayerNotesResponse" message="tns:IPayerManager_AddPayerNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePracticePayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/RemovePracticePayer" message="tns:IPayerManager_RemovePracticePayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/RemovePracticePayerResponse" message="tns:IPayerManager_RemovePracticePayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayerListData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/GetPayerListData" message="tns:IPayerManager_GetPayerListData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/GetPayerListDataResponse" message="tns:IPayerManager_GetPayerListData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerInfoForPracticeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerInfoForPracticeId" message="tns:IPayerManager_GetPracticePayerInfoForPracticeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerInfoForPracticeIdResponse" message="tns:IPayerManager_GetPracticePayerInfoForPracticeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPracticePayerDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/AddPracticePayerDetail" message="tns:IPayerManager_AddPracticePayerDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/AddPracticePayerDetailResponse" message="tns:IPayerManager_AddPracticePayerDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerDetailForPracticeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeId" message="tns:IPayerManager_GetPracticePayerDetailForPracticeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeIdResponse" message="tns:IPayerManager_GetPracticePayerDetailForPracticeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerDetailForPracticeIdList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeIdList" message="tns:IPayerManager_GetPracticePayerDetailForPracticeIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeIdListResponse" message="tns:IPayerManager_GetPracticePayerDetailForPracticeIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProviderIdRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/IsProviderIdRequired" message="tns:IPayerManager_IsProviderIdRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/IsProviderIdRequiredResponse" message="tns:IPayerManager_IsProviderIdRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsGroupProviderIdRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/IsGroupProviderIdRequired" message="tns:IPayerManager_IsGroupProviderIdRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/IsGroupProviderIdRequiredResponse" message="tns:IPayerManager_IsGroupProviderIdRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsIndividualProviderIdRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPayerManager/IsIndividualProviderIdRequired" message="tns:IPayerManager_IsIndividualProviderIdRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPayerManager/IsIndividualProviderIdRequiredResponse" message="tns:IPayerManager_IsIndividualProviderIdRequired_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPayerManager" type="tns:IPayerManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddPracticePayer">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/AddPracticePayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPayerNotes">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/AddPayerNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePracticePayer">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/RemovePracticePayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayerListData">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/GetPayerListData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerInfoForPracticeId">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/GetPracticePayerInfoForPracticeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPracticePayerDetail">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/AddPracticePayerDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerDetailForPracticeId">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPracticePayerDetailForPracticeIdList">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/GetPracticePayerDetailForPracticeIdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProviderIdRequired">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/IsProviderIdRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsGroupProviderIdRequired">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/IsGroupProviderIdRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsIndividualProviderIdRequired">
+      <soap:operation soapAction="http://tempuri.org/IPayerManager/IsIndividualProviderIdRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PayerManager">
+    <wsdl:port name="BasicHttpBinding_IPayerManager" binding="tns:BasicHttpBinding_IPayerManager">
+      <soap:address location="http://dswcf02:61592/PayerManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" />
+  <xs:import schemaLocation="http://dswcf02:61592/PayerManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="AddPracticePayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+        <xs:element minOccurs="0" name="payerListIds" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPracticePayerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPayerNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" minOccurs="0" name="payerNotes" nillable="true" type="q1:PayerNotes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPayerNotesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePracticePayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+        <xs:element minOccurs="0" name="payerListId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePracticePayerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayerListData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="formType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keywordFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="numrows" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayerListDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" minOccurs="0" name="GetPayerListDataResult" nillable="true" type="q2:ArrayOfPayer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerInfoForPracticeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerInfoForPracticeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetPracticePayerInfoForPracticeIdResult" nillable="true" type="q3:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPracticePayerDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" minOccurs="0" name="payerdetails" nillable="true" type="q4:ArrayOfPracticePayerDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPracticePayerDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerDetailForPracticeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="practiceId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerDetailForPracticeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" minOccurs="0" name="GetPracticePayerDetailForPracticeIdResult" nillable="true" type="q5:ArrayOfPracticePayerDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerDetailForPracticeIdList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="practiceIdList" nillable="true" type="q6:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPracticePayerDetailForPracticeIdListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Payer" minOccurs="0" name="GetPracticePayerDetailForPracticeIdListResult" nillable="true" type="q7:ArrayOfPracticePayerDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProviderIdRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="payerListId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProviderIdRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsProviderIdRequiredResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGroupProviderIdRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="payerListId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGroupProviderIdRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsGroupProviderIdRequiredResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsIndividualProviderIdRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="payerListId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsIndividualProviderIdRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsIndividualProviderIdRequiredResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

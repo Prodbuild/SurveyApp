@@ -1,0 +1,12 @@
+﻿@using Kendo.Mvc.UI
+
+@model string
+
+@(Html.Kendo().DropDownListFor(m => m)
+             .Name("TestingRep")
+             .DataTextField("Text")
+             .DataValueField("Value")
+             .OptionLabel("Reassign Work Item")
+             .BindTo(new SelectList((IEnumerable<SelectListItem>)ViewBag.GroupMembers, "Value", "Text"))
+             .Events(events => events.Change("confirmAssignment"))
+)

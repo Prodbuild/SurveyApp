@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MadaketClient" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Madaket.Objects" />
+      <xsd:import schemaLocation="http://localhost:63085/MadaketIntegrationManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMadaketClient_GetPayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayers" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetPayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroup" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByDate" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByTaxId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByTaxId" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByTaxId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByTaxIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByTaxIdAndNpi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByTaxIdAndNpi" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByTaxIdAndNpi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByTaxIdAndNpiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByOriginatingRequestId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByOriginatingRequestId" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetEnrollmentStatusByOriginatingRequestId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentStatusByOriginatingRequestIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroupsBySiteId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroupsBySiteId" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroupsBySiteId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroupsBySiteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroupsByTaxId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroupsByTaxId" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetMedicalGroupsByTaxId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalGroupsByTaxIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_CreateAllMedicalGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAllMedicalGroups" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_CreateAllMedicalGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAllMedicalGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_EnrollMedicalGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollMedicalGroup" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_EnrollMedicalGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollMedicalGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_EnrollAllMedicalGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollAllMedicalGroups" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_EnrollAllMedicalGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollAllMedicalGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_UpdatePayerEnrollmentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayerEnrollmentStatus" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_UpdatePayerEnrollmentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayerEnrollmentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetOpenEnrollmentSubmissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenEnrollmentSubmissions" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetOpenEnrollmentSubmissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenEnrollmentSubmissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetOpenEnrollmentSubmissionsForSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenEnrollmentSubmissionsForSite" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_GetOpenEnrollmentSubmissionsForSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenEnrollmentSubmissionsForSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_RemoveEnrollmentSubmission_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEnrollmentSubmission" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_RemoveEnrollmentSubmission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEnrollmentSubmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_AddEnrollmentSubmission_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEnrollmentSubmission" />
+  </wsdl:message>
+  <wsdl:message name="IMadaketClient_AddEnrollmentSubmission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEnrollmentSubmissionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMadaketClient">
+    <wsdl:operation name="GetPayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetPayers" message="tns:IMadaketClient_GetPayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetPayersResponse" message="tns:IMadaketClient_GetPayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroup" message="tns:IMadaketClient_GetMedicalGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroupResponse" message="tns:IMadaketClient_GetMedicalGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByDate" message="tns:IMadaketClient_GetEnrollmentStatusByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByDateResponse" message="tns:IMadaketClient_GetEnrollmentStatusByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByTaxId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxId" message="tns:IMadaketClient_GetEnrollmentStatusByTaxId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxIdResponse" message="tns:IMadaketClient_GetEnrollmentStatusByTaxId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByTaxIdAndNpi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxIdAndNpi" message="tns:IMadaketClient_GetEnrollmentStatusByTaxIdAndNpi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxIdAndNpiResponse" message="tns:IMadaketClient_GetEnrollmentStatusByTaxIdAndNpi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByOriginatingRequestId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByOriginatingRequestId" message="tns:IMadaketClient_GetEnrollmentStatusByOriginatingRequestId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByOriginatingRequestIdResponse" message="tns:IMadaketClient_GetEnrollmentStatusByOriginatingRequestId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroupsBySiteId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroupsBySiteId" message="tns:IMadaketClient_GetMedicalGroupsBySiteId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroupsBySiteIdResponse" message="tns:IMadaketClient_GetMedicalGroupsBySiteId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroupsByTaxId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroupsByTaxId" message="tns:IMadaketClient_GetMedicalGroupsByTaxId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetMedicalGroupsByTaxIdResponse" message="tns:IMadaketClient_GetMedicalGroupsByTaxId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAllMedicalGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/CreateAllMedicalGroups" message="tns:IMadaketClient_CreateAllMedicalGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/CreateAllMedicalGroupsResponse" message="tns:IMadaketClient_CreateAllMedicalGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrollMedicalGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/EnrollMedicalGroup" message="tns:IMadaketClient_EnrollMedicalGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/EnrollMedicalGroupResponse" message="tns:IMadaketClient_EnrollMedicalGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrollAllMedicalGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/EnrollAllMedicalGroups" message="tns:IMadaketClient_EnrollAllMedicalGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/EnrollAllMedicalGroupsResponse" message="tns:IMadaketClient_EnrollAllMedicalGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayerEnrollmentStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/UpdatePayerEnrollmentStatus" message="tns:IMadaketClient_UpdatePayerEnrollmentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/UpdatePayerEnrollmentStatusResponse" message="tns:IMadaketClient_UpdatePayerEnrollmentStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenEnrollmentSubmissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissions" message="tns:IMadaketClient_GetOpenEnrollmentSubmissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissionsResponse" message="tns:IMadaketClient_GetOpenEnrollmentSubmissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenEnrollmentSubmissionsForSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissionsForSite" message="tns:IMadaketClient_GetOpenEnrollmentSubmissionsForSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissionsForSiteResponse" message="tns:IMadaketClient_GetOpenEnrollmentSubmissionsForSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEnrollmentSubmission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/RemoveEnrollmentSubmission" message="tns:IMadaketClient_RemoveEnrollmentSubmission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/RemoveEnrollmentSubmissionResponse" message="tns:IMadaketClient_RemoveEnrollmentSubmission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEnrollmentSubmission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMadaketClient/AddEnrollmentSubmission" message="tns:IMadaketClient_AddEnrollmentSubmission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMadaketClient/AddEnrollmentSubmissionResponse" message="tns:IMadaketClient_AddEnrollmentSubmission_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMadaketClient" type="tns:IMadaketClient">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPayers">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetPayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroup">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetMedicalGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByDate">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByTaxId">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByTaxIdAndNpi">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByTaxIdAndNpi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentStatusByOriginatingRequestId">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetEnrollmentStatusByOriginatingRequestId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroupsBySiteId">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetMedicalGroupsBySiteId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalGroupsByTaxId">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetMedicalGroupsByTaxId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAllMedicalGroups">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/CreateAllMedicalGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrollMedicalGroup">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/EnrollMedicalGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrollAllMedicalGroups">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/EnrollAllMedicalGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayerEnrollmentStatus">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/UpdatePayerEnrollmentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenEnrollmentSubmissions">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenEnrollmentSubmissionsForSite">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/GetOpenEnrollmentSubmissionsForSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEnrollmentSubmission">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/RemoveEnrollmentSubmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEnrollmentSubmission">
+      <soap:operation soapAction="http://tempuri.org/IMadaketClient/AddEnrollmentSubmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MadaketClient">
+    <wsdl:port name="BasicHttpBinding_IMadaketClient" binding="tns:BasicHttpBinding_IMadaketClient">
+      <soap:address location="http://localhost:63085/MadaketIntegrationManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

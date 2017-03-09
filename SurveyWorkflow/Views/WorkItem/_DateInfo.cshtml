@@ -1,0 +1,192 @@
+﻿@using EnrollmentWorkflow.Models
+@using Kendo.Mvc.UI;
+@using EnrollmentWorkflow.Helpers
+@using EnrollmentWorkflow.Enums
+
+@model WorkItemModel
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "dateInfoForm_" + @Model.Id, @class = "form-horizontal" }))
+{
+    <input type="hidden" value="@{@Model.Id}" name="workItemId" />
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.ContractDate, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-2">
+                            @(Html.Kendo().DatePickerFor(x => x.ContractDate)
+                                    .Name("ContractDate")
+                                    .HtmlAttributes(new { @id = "ContractDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                        </div>
+
+
+                        @*<div class="col-md-2">
+                                @Html.TextBoxFor(x => x.ContractDate, new { @Value = (Model.ContractDate == null) ? String.Empty : Model.ContractDate.Value.ToString("d"), @class = "form-control", @disabled = "disabled" })
+                            </div>*@
+
+                        @Html.LabelFor(x => x.DaysToImplement, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-2">
+                            @Html.TextBoxFor(x => x.DaysToImplement, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.GoLiveDate, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-2">
+                            @(Html.Kendo().DatePickerFor(x => x.GoLiveDate)
+                                .Name("GoLiveDate")
+                                .HtmlAttributes(new { @id = "GoLiveDate_" + @Model.Id, @Type = "text" })
+                                .Enable(false))
+                            @*@Html.TextBoxFor(x => x.GoLiveDate, new { @Value = (Model.GoLiveDate == null) ? String.Empty : Model.GoLiveDate.Value.ToString("d"), @class = "form-control", @readonly = "readonly" })*@
+                        </div>
+
+                        @Html.LabelFor(x => x.GoLiveChanges, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-2">
+                            @Html.TextBoxFor(x => x.GoLiveChanges, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+
+                        @Html.LabelFor(x => x.ReinstateDate, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-2">
+                            @(Html.Kendo().DatePickerFor(x => x.ReinstateDate)
+                                .Name("reinstateDate")
+                                .HtmlAttributes(new { @id = "reinstateDate_" + @Model.Id, @Type = "text" })
+                                .Enable(false))
+                        </div>
+
+
+                        @*@Html.LabelFor(x => x.ProvidersSold, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @Html.TextBoxFor(x => x.ProvidersSold, new { @class = "form-control", @disabled = "disabled" })
+                            </div>*@
+
+                    </div>
+                        <div class="form-group">
+
+                            @Html.LabelFor(x => x.LastContacted, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.LastContacted)
+                                  .Name("lastContacted")
+                                  .HtmlAttributes(new { @id = "lastContacted_" + @Model.Id, @Type = "text" })
+                                  .Enable(false))
+                            </div>
+
+                            @*@Html.LabelFor(x => x.TargetDate, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-2">
+                                    @Html.TextBoxFor(x => x.TargetDate, new {@Value = Model.TargetDate.ToString("d"), @class = "form-control", @readonly = "readonly" })
+                                </div>*@
+
+
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.KickOffCallDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.KickOffCallDate)
+                                    .Name("kickOffCallDate")
+                                    .HtmlAttributes(new { @id = "kickOffCallDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.ClientSubmissionDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.ClientSubmissionDate)
+                                      .Name("clientSubmissionDate")
+                                      .HtmlAttributes(new { @id = "clientSubmissionDate_" + @Model.Id, @Type = "text" })
+                                      .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.EnrollmentSentToThirdParty, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.EnrollmentSentToThirdParty)
+                                    .Name("enrollmentSentToThirdParty")
+                                    .HtmlAttributes(new { @id = "enrollmentSentToThirdParty_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.TAFReceivedDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.TAFReceivedDate)
+                                    .Name("tafReceivedDate")
+                                    .HtmlAttributes(new { @id = "tafReceivedDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.PaperworkReceived, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.PaperworkReceived)
+                                    .Name("paperworkReceived")
+                                    .HtmlAttributes(new { @id = "paperworkReceived_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.PaperworkSentToPayer, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.PaperworkSentToPayer)
+                                    .Name("paperworkSentToPayer")
+                                    .HtmlAttributes(new { @id = "paperworkSentToPayer_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.IntroDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.IntroDate)
+                                    .Name("introDate")
+                                    .HtmlAttributes(new { @id = "introDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.InstallDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.InstallDate)
+                                    .Name("installDate")
+                                    .HtmlAttributes(new { @id = "installDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.TestingDate1, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.TestingDate1)
+                                  .Name("testingDate1")
+                                  .HtmlAttributes(new { @id = "testingDate1_" + @Model.Id, @Type = "text" })
+                                  .Enable(false))
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.ProductionDate, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.ProductionDate)
+                                    .Name("productionDate")
+                                    .HtmlAttributes(new { @id = "productionDate_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.SiteAnalysisDue, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.SiteAnalysisDue)
+                                    .Name("siteAnalysisDue")
+                                    .HtmlAttributes(new { @id = "siteAnalysisDue_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                            @Html.LabelFor(x => x.SiteAnalysisAttempts, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @Html.TextBoxFor(x => x.SiteAnalysisAttempts, new { @class = "form-control", @disabled = "disabled" })
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.MovedOutOfImplementation, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-2">
+                                @(Html.Kendo().DatePickerFor(x => x.MovedOutOfImplementation)
+                                    .Name("movedOutOfImplementation")
+                                    .HtmlAttributes(new { @id = "movedOutOfImplementation_" + @Model.Id, @Type = "text" })
+                                    .Enable(false))
+                            </div>
+
+                        </div>
+    }

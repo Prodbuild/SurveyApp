@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProviderManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tswcf02:61592/ProviderManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://tswcf02:61592/ProviderManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tswcf02:61592/ProviderManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnrollmentService.Domain.Provider" />
+      <xsd:import schemaLocation="http://tswcf02:61592/ProviderManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProviderManager_AddProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProvider" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_AddProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_AddProviderNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProviderNotes" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_AddProviderNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProviderNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_AddProviderPracticeCrosswalk_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProviderPracticeCrosswalk" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_AddProviderPracticeCrosswalk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProviderPracticeCrosswalkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_UpdateProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProvider" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_UpdateProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_RemoveProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProvider" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_RemoveProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviders" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProvidersForPractice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersForPractice" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProvidersForPractice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersForPracticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProvidersForProviderIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersForProviderIds" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProvidersForProviderIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersForProviderIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProviderPracticeInfoForProviderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviderPracticeInfoForProviderId" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetProviderPracticeInfoForProviderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviderPracticeInfoForProviderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetSpecialtyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialtyList" />
+  </wsdl:message>
+  <wsdl:message name="IProviderManager_GetSpecialtyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialtyListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProviderManager">
+    <wsdl:operation name="AddProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/AddProvider" message="tns:IProviderManager_AddProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/AddProviderResponse" message="tns:IProviderManager_AddProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProviderNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/AddProviderNotes" message="tns:IProviderManager_AddProviderNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/AddProviderNotesResponse" message="tns:IProviderManager_AddProviderNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProviderPracticeCrosswalk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/AddProviderPracticeCrosswalk" message="tns:IProviderManager_AddProviderPracticeCrosswalk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/AddProviderPracticeCrosswalkResponse" message="tns:IProviderManager_AddProviderPracticeCrosswalk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/UpdateProvider" message="tns:IProviderManager_UpdateProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/UpdateProviderResponse" message="tns:IProviderManager_UpdateProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/RemoveProvider" message="tns:IProviderManager_RemoveProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/RemoveProviderResponse" message="tns:IProviderManager_RemoveProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/GetProviders" message="tns:IProviderManager_GetProviders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/GetProvidersResponse" message="tns:IProviderManager_GetProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvidersForPractice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/GetProvidersForPractice" message="tns:IProviderManager_GetProvidersForPractice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/GetProvidersForPracticeResponse" message="tns:IProviderManager_GetProvidersForPractice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvidersForProviderIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/GetProvidersForProviderIds" message="tns:IProviderManager_GetProvidersForProviderIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/GetProvidersForProviderIdsResponse" message="tns:IProviderManager_GetProvidersForProviderIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderPracticeInfoForProviderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/GetProviderPracticeInfoForProviderId" message="tns:IProviderManager_GetProviderPracticeInfoForProviderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/GetProviderPracticeInfoForProviderIdResponse" message="tns:IProviderManager_GetProviderPracticeInfoForProviderId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialtyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProviderManager/GetSpecialtyList" message="tns:IProviderManager_GetSpecialtyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProviderManager/GetSpecialtyListResponse" message="tns:IProviderManager_GetSpecialtyList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProviderManager" type="tns:IProviderManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddProvider">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/AddProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProviderNotes">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/AddProviderNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProviderPracticeCrosswalk">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/AddProviderPracticeCrosswalk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProvider">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/UpdateProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProvider">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/RemoveProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/GetProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvidersForPractice">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/GetProvidersForPractice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvidersForProviderIds">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/GetProvidersForProviderIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderPracticeInfoForProviderId">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/GetProviderPracticeInfoForProviderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialtyList">
+      <soap:operation soapAction="http://tempuri.org/IProviderManager/GetSpecialtyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProviderManager">
+    <wsdl:port name="BasicHttpBinding_IProviderManager" binding="tns:BasicHttpBinding_IProviderManager">
+      <soap:address location="http://tswcf02:61592/ProviderManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

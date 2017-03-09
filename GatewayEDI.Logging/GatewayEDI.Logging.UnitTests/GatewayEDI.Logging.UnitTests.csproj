@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D68FB50-7C20-41B2-9CCA-14ECF3259B00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GatewayEDI.Logging.UnitTests</RootNamespace>
+    <AssemblyName>GatewayEDI.Logging.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>\\gsdevtools01.gatewayedi.com\gedi.netlibs\Log4Net\log4net-1.2.11\bin\net\3.5\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq">
+      <HintPath>..\..\..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\packages\NLog.4.2.3\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivatorHelperTest.cs" />
+    <Compile Include="AppConfigFactoryResolverTest.cs" />
+    <Compile Include="CompositeLogTest.cs" />
+    <Compile Include="ConsoleLogFactoryTest.cs" />
+    <Compile Include="ConsoleLogTest.cs" />
+    <Compile Include="DebugLogFactoryTest.cs" />
+    <Compile Include="DebugLogTest.cs" />
+    <Compile Include="DecoratorLogTest.cs" />
+    <Compile Include="DelegateFactoryResolverTest.cs" />
+    <Compile Include="DelegateFactoryTest.cs" />
+    <Compile Include="DelegateLogFactoryTest.cs" />
+    <Compile Include="DelegateLogItemFormatterTest.cs" />
+    <Compile Include="DelegateLogTest.cs" />
+    <Compile Include="DelegateResolverTest.cs" />
+    <Compile Include="FactoryConfigurationCollectionTest.cs" />
+    <Compile Include="FactoryConfigurationElementTest.cs" />
+    <Compile Include="FormattableLogBaseTest.cs" />
+    <Compile Include="GEDITraceListenerTest.cs" />
+    <Compile Include="Log4netLogFactoryTest.cs" />
+    <Compile Include="Log4netLogTest.cs" />
+    <Compile Include="LogBaseTest.cs" />
+    <Compile Include="LogConfigurationCollectionTest.cs" />
+    <Compile Include="LogConfigurationElementTest.cs" />
+    <Compile Include="LogConfigurationSectionTest.cs" />
+    <Compile Include="LogItemTest.cs" />
+    <Compile Include="LogManagerTest.cs" />
+    <Compile Include="NamedFactoryResolverTest.cs" />
+    <Compile Include="NamedFactoryTest.cs" />
+    <Compile Include="NamedLogFactoryBaseTest.cs" />
+    <Compile Include="NLogLogFactoryTest.cs" />
+    <Compile Include="NLogLogTest.cs" />
+    <Compile Include="NullLogFactoryResolverTest.cs" />
+    <Compile Include="NullLogFactoryTest.cs" />
+    <Compile Include="NullLogTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleFactoryResolverTest.cs" />
+    <Compile Include="SimpleLogFactoryTest.cs" />
+    <Compile Include="SimpleLogItemFormatterTest.cs" />
+    <Compile Include="SimpleLogResolverTest.cs" />
+    <Compile Include="SingleLineFormatterTest.cs" />
+    <Compile Include="SingleLogFactoryTest.cs" />
+    <Compile Include="TestLogFactoryTest.cs" />
+    <Compile Include="TestLogTest.cs" />
+    <Compile Include="TraceLogFactoryTest.cs" />
+    <Compile Include="TraceLogTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facades\Log4netFacade\Log4netFacade.csproj">
+      <Project>{21C55A35-1D0E-40E6-9B79-763B7D8878E2}</Project>
+      <Name>Log4netFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facades\NLogFacade\NLogFacade.csproj">
+      <Project>{90c6db05-24ed-45a9-aadd-3bc07cf162dd}</Project>
+      <Name>NLogFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatewayEDI.Logging\GatewayEDI.Logging.csproj">
+      <Project>{AAD33637-26A6-428C-B177-0A880A75B5C3}</Project>
+      <Name>GatewayEDI.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\GatewayEDI.Logging.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Log4netFacade.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\NLogFacade.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
