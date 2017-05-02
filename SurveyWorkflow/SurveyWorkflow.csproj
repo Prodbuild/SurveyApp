@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnrollmentWorkflow</RootNamespace>
-    <AssemblyName>EnrollmentWorkflow</AssemblyName>
+    <RootNamespace>SurveyWorkFlow</RootNamespace>
+    <AssemblyName>SurveyWorkFlow</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -137,80 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\AttachmentsController.cs" />
-    <Compile Include="Controllers\ChartsController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\WorkItemController.cs" />
-    <Compile Include="Controllers\ReportsController.cs" />
-    <Compile Include="Domain\SiteCreatedEvent.cs" />
-    <Compile Include="Domain\EmailEvent.cs" />
-    <Compile Include="Domain\SettingsManager.cs" />
-    <Compile Include="Domain\SetWeight.cs" />
-    <Compile Include="Domain\WorkItemStatistics.cs" />
-    <Compile Include="Enums\ClientType.cs" />
-    <Compile Include="Enums\CommunicationType.cs" />
-    <Compile Include="Enums\WorkItemStatus.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\DataAnotationsExtensions.cs" />
-    <Compile Include="Helpers\DateTimeHelper.cs" />
-    <Compile Include="Helpers\DomainUsers.cs" />
-    <Compile Include="Helpers\EnumStringValueAttribute.cs" />
-    <Compile Include="Helpers\SelectListHelper.cs" />
-    <Compile Include="Helpers\ValidIntegerValidator.cs" />
-    <Compile Include="Helpers\WcfClient.cs" />
-    <Compile Include="Helpers\WorkItemMapper.cs" />
-    <Compile Include="Helpers\WorkItemStatusMapper.cs" />
-    <Compile Include="Models\EnrollmentDetailsModel.cs" />
-    <Compile Include="Models\HomeModel.cs" />
-    <Compile Include="Models\NewWorkItem.cs" />
-    <Compile Include="Models\PayerModel.cs" />
-    <Compile Include="Models\PracticePayerDetailModel.cs" />
-    <Compile Include="Models\PracticeModel.cs" />
-    <Compile Include="Models\PraticeDetailsModel.cs" />
-    <Compile Include="Models\ProviderModel.cs" />
-    <Compile Include="Models\SettingsModel.cs" />
-    <Compile Include="Models\SitesInImplementationModel.cs" />
-    <Compile Include="Models\WorkItemCategoryModel.cs" />
-    <Compile Include="Models\WorkItemModel.cs" />
-    <Compile Include="Models\WorkItemReportModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ActionItemManager\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\EventService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\MadaketIntegration\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\PayerManager\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\PracticeManager\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ProviderManager\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\WorkItemManager\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -362,203 +293,6 @@
     <Content Include="Scripts\tabs.js" />
     <None Include="Properties\PublishProfiles\EnrollmentWorkFlow_Build.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <None Include="Service References\ActionItemManager\ActionItemManager.disco" />
-    <None Include="Service References\ActionItemManager\configuration91.svcinfo" />
-    <None Include="Service References\ActionItemManager\configuration.svcinfo" />
-    <Content Include="Service References\ActionItemManager\EnrollmentWorkflow.ActionItemManager.ActionItem.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ActionItemManager\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\EventService\EnrollmentWorkflow.EventService.PortalEvent.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ActionItemManager\ActionItemManager.wsdl" />
-    <None Include="Service References\ActionItemManager\ActionItemManager.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ActionItemManager\ActionItemManager1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ActionItemManager\ActionItemManager2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EventService\configuration91.svcinfo" />
-    <None Include="Service References\EventService\configuration.svcinfo" />
-    <None Include="Service References\EventService\EventService1.wsdl" />
-    <None Include="Service References\EventService\EventService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EventService\EventService31.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EventService\EventService32.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EventService\EventService33.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EventService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\EventService\EventService1.disco" />
-    <Content Include="Service References\MadaketIntegration\EnrollmentWorkflow.MadaketIntegration.MedicalGroup.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\MadaketIntegration\EnrollmentWorkflow.MadaketIntegration.MedicalGroupEnrollmentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\MadaketIntegration\EnrollmentWorkflow.MadaketIntegration.EnrollmentStatusResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\MadaketIntegration\EnrollmentWorkflow.MadaketIntegration.EnrollmentSubmission.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\MadaketIntegration\configuration91.svcinfo" />
-    <None Include="Service References\MadaketIntegration\configuration.svcinfo" />
-    <None Include="Service References\MadaketIntegration\MadaketClient1.wsdl" />
-    <None Include="Service References\MadaketIntegration\MadaketIntegrationManager4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MadaketIntegration\MadaketIntegrationManager41.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MadaketIntegration\MadaketIntegrationManager42.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MadaketIntegration\MadaketIntegrationManager43.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MadaketIntegration\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\MadaketIntegration\MadaketIntegrationManager1.disco" />
-    <Content Include="Service References\PayerManager\EnrollmentWorkflow.PayerManager.Payer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\PayerManager\EnrollmentWorkflow.PayerManager.PracticePayerDetail.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\PayerManager\configuration91.svcinfo" />
-    <None Include="Service References\PayerManager\configuration.svcinfo" />
-    <None Include="Service References\PayerManager\PayerManager1.wsdl" />
-    <None Include="Service References\PayerManager\PayerManager510.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager511.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager512.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager513.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager514.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager515.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager516.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager517.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager518.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager519.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PayerManager\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\PayerManager\PayerManager1.disco" />
-    <Content Include="Service References\PracticeManager\EnrollmentWorkflow.PracticeManager.EnrollmentStatus.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\PracticeManager\EnrollmentWorkflow.PracticeManager.Practice.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\PracticeManager\configuration91.svcinfo" />
-    <None Include="Service References\PracticeManager\configuration.svcinfo" />
-    <None Include="Service References\PracticeManager\PracticeManager.wsdl" />
-    <None Include="Service References\PracticeManager\PracticeManager.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager12.wsdl" />
-    <None Include="Service References\PracticeManager\PracticeManager2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager410.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager411.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager48.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager49.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PracticeManager\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\PracticeManager\PracticeManager12.disco" />
-    <None Include="Service References\PracticeManager\PracticeManager.disco" />
-    <Content Include="Service References\ProviderManager\EnrollmentWorkflow.ProviderManager.Provider.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ProviderManager\EnrollmentWorkflow.ProviderManager.Specialty.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ProviderManager\configuration91.svcinfo" />
-    <None Include="Service References\ProviderManager\configuration.svcinfo" />
-    <None Include="Service References\ProviderManager\ProviderManager.wsdl" />
-    <None Include="Service References\ProviderManager\ProviderManager.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProviderManager\ProviderManager1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProviderManager\ProviderManager2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProviderManager\ProviderManager3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProviderManager\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\ProviderManager\ProviderManager.disco" />
-    <Content Include="Service References\WorkItemManager\EnrollmentWorkflow.WorkItemManager.WorkItem.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\WorkItemManager\configuration91.svcinfo" />
-    <None Include="Service References\WorkItemManager\configuration.svcinfo" />
-    <None Include="Service References\WorkItemManager\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService1.disco" />
-    <None Include="Service References\WorkItemManager\WorkItemService11.disco" />
-    <None Include="Service References\WorkItemManager\WorkItemService2.disco" />
     <Content Include="Styles\kendo\Bootstrap\editor.png" />
     <Content Include="Styles\kendo\Bootstrap\imagebrowser.png" />
     <Content Include="Styles\kendo\Bootstrap\indeterminate.gif" />
@@ -595,10 +329,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-2.1.3.min.map" />
-    <Content Include="Views\Shared\DisplayTemplates\WorkItemCategoryModel.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\EnrollmentRepDropDown.cshtml" />
-    <Content Include="Views\WorkItem\Index.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\EnrollmentDetailsModel.cshtml" />
     <Content Include="Scripts\kendo\jquery.min.map" />
     <Content Include="Scripts\kendo\kendo.all.min.js.map" />
     <Content Include="Scripts\kendo\kendo.angular.min.js.map" />
@@ -714,57 +444,16 @@
     <Content Include="Scripts\kendo\kendo.web.min.js.map" />
     <Content Include="Scripts\kendo\kendo.window.min.js.map" />
     <Content Include="Styles\kendo\images\kendoui.woff" />
-    <Content Include="Views\Shared\Dashboard.cshtml" />
-    <Content Include="Views\Shared\Sites.cshtml" />
-    <Content Include="Views\Reports\Settings.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\TestingRepDropDown.cshtml" />
-    <Content Include="Views\WorkItem\_DateInfo.cshtml" />
-    <Content Include="Views\Shared\WorkItems.cshtml" />
-    <Content Include="Views\Shared\WorkList.cshtml" />
-    <None Include="Service References\WorkItemManager\WorkItemService32.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService33.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService34.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService35.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService36.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService37.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService38.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService39.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService6.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService7.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemService8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WorkItemManager\WorkItemSvc.wsdl" />
-    <None Include="Service References\WorkItemManager\WorkItemSvc2.wsdl" />
-    <None Include="Service References\WorkItemManager\WorkItemSvc3.wsdl" />
-    <Content Include="Views\Shared\WorkItemManager.cshtml" />
-    <Content Include="Views\Shared\CreateNewWorkItem.cshtml" />
+    <Content Include="Views\Survey\Index.cshtml" />
+    <Content Include="Views\Shared\AddSurvey.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -772,32 +461,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ActionItemManager\" />
-    <WCFMetadataStorage Include="Service References\EventService\" />
-    <WCFMetadataStorage Include="Service References\MadaketIntegration\" />
-    <WCFMetadataStorage Include="Service References\PayerManager\" />
-    <WCFMetadataStorage Include="Service References\PracticeManager\" />
-    <WCFMetadataStorage Include="Service References\ProviderManager\" />
-    <WCFMetadataStorage Include="Service References\WorkItemManager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GatewayEDI.InternalApps.Common\GatewayEDI.InternalApps.Common.csproj">
-      <Project>{dabde196-71e0-4da8-91a7-9d064261fe0c}</Project>
-      <Name>GatewayEDI.InternalApps.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GatewayEDI.Logging\GatewayEDI.Logging\GatewayEDI.Logging.csproj">
       <Project>{aad33637-26a6-428c-b177-0a880a75b5c3}</Project>
       <Name>GatewayEDI.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TPS.ServicesWeb.Common\TPS.ServicesWeb.Common.csproj">
-      <Project>{f31c9294-7222-415c-92f5-0cf6d8d857d6}</Project>
-      <Name>TPS.ServicesWeb.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -836,7 +502,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56997</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8090/EnrollmentWorkflow</IISUrl>
+          <IISUrl>http://localhost:8091/SurveyWorkflow</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
